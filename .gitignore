@@ -1,0 +1,7 @@
+*.json
+*.out
+.obj
+.cache
+easyfind
+span
+
