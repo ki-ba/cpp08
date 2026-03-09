@@ -30,6 +30,7 @@ public:
 	unsigned int getSize() const;
 	unsigned int shortestSpan();
 	unsigned int longestSpan();
+	void preview();
 
 private:
 	std::set<int> _numbers;

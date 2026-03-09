@@ -97,3 +97,29 @@ unsigned int Span::longestSpan()
 		throw (std::runtime_error("Not enough numbers"));
 	return (*this->_numbers.rbegin() - *this->_numbers.begin());
 }
+
+void Span::preview()
+{
+	std::set<int>::const_iterator it = this->_numbers.begin();
+	std::set<int>::const_iterator it_hide(this->_numbers.begin());
+	std::set<int>::const_iterator it_unhide(this->_numbers.end());
+	it_hide++;
+	it_hide++;
+	it_unhide--;
+	it_unhide--;
+	std::cout << "[";
+	while (it != it_hide)
+	{
+			std::cout << *it << " ";
+			it++;
+	}
+	if (it != this->_numbers.end())
+		std::cout << "... ";
+	while (it_unhide != this->_numbers.end())
+	{
+			std::cout << *it_unhide << " ";
+			it_unhide++;
+	}
+	std::cout << "]" << std::endl;
+
+}
