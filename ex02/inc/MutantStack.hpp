@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 17:00:00 by kbarru            #+#    #+#             */
-/*   Updated: 2026/03/05 13:57:37 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2026/03/09 11:08:36 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ template <typename T, typename Container>
 MutantStack<T, Container> &MutantStack<T, Container>::operator=(MutantStack &other)
 {
 	this->c = other.c;
+	return (*this);
 }
 
 template <typename T, typename Container>
